@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 application = flask.Flask(__name__)
 application.config["DEBUG"] = True
-CORS(application,resources={r"/*": {"origins": "*"}})
+CORS(application,resources={r"/api/*": {"origins": "http://elc-prjfrntend-beanstalk-env.eba-8syr2nnq.ap-south-1.elasticbeanstalk.com/"}})
 application.config['CORS_HEADERS'] = 'Content-Type'
 
 
@@ -35,7 +35,8 @@ class Apiservice():
 
        except Exception as exc:
           logger.error(exc)
-          self.conn = psycopg2.connect(user="postgres",password="admin987",host="database-1.ciuhxly1igor.ap-south-1.rds.amazonaws.com",port=5432,dbname="postgres")
+          self.conn = psycopg2.connect(user="postgreselc",password="Rajat#1db",host="database-1.cmm4bpbjhedp.ap-south-1.rds.amazonaws.com",port=5432,dbname="postgres")
+      
        return self.conn
     
     
