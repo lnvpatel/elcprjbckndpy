@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 application = flask.Flask(__name__)
 application.config["DEBUG"] = True
-CORS(application,resources={r"/api/*": {"origins": "http://elc-prjfrntend-beanstalk-env.eba-8syr2nnq.ap-south-1.elasticbeanstalk.com/"}})
+CORS(application,resources={r"/api/*": {"origins": "*"}})
 application.config['CORS_HEADERS'] = 'Content-Type'
 
 
