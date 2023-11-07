@@ -23,7 +23,7 @@ class Apiservice():
     def __init__(self):
     
       print('Inside __init__')
-      self.conn = psycopg2.connect(user="postgre",password="Rajat#1db",host="database-1.cmm4bpbjhedp.ap-south-1.rds.amazonaws.com",port=5432,dbname="postgres")
+      self.conn = psycopg2.connect(user="postgre",password="Rajat#123",host="database-1.cmm4bpbjhedp.ap-south-1.rds.amazonaws.com",port=5432,dbname="postgres")
       
       
     def getConnection (self):
@@ -35,7 +35,7 @@ class Apiservice():
 
        except Exception as exc:
           logger.error(exc)
-          self.conn = psycopg2.connect(user="postgre",password="Rajat#1db",host="database-1.cmm4bpbjhedp.ap-south-1.rds.amazonaws.com",port=5432,dbname="postgres")
+          self.conn = psycopg2.connect(user="postgre",password="Rajat#123",host="database-1.cmm4bpbjhedp.ap-south-1.rds.amazonaws.com",port=5432,dbname="postgres")
       
        return self.conn
     
